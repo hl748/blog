@@ -20,7 +20,6 @@ render(){
         <form>
         <textarea
           name="blogContent"
-          // Great good day to youu then
           id="textarea"
           rows="10"
           cols="100"

@@ -55,9 +55,7 @@ app.post("/blog1", async (req, res) => {
 app.post("/blog2", async (req, res) => {
   console.log("blog2");
   const response = await list.find();
-  console.log(response + "issue?");
   const result = response[1];
-  console.log(result + "dude?");
   console.log(result);
   res.send(result);
 });
@@ -74,7 +72,7 @@ app.post("/edit1", async (req, res) => {
   console.log("Request body", req.body);
   const edit = await list.updateOne(
     { _id: ObjectId("61e36b8501f684db6ef969de")},
-    { $set: { body: req.body.editblog } } // we were doing JSON.stringify({editblog: '' }),
+    { $set: { body: req.body.editblog } } 
   );
   console.log(edit);
   res.send({ message: "Blog updated" });
@@ -84,7 +82,7 @@ app.post("/edit2", async (req, res) => {
   console.log("Request body", req.body);
   const edit = await list.updateOne(
     { _id: ObjectId("61e36baa01f684db6ef969df")},
-    { $set: { body: req.body.editblog } } // we were doing JSON.stringify({editblog: '' }),
+    { $set: { body: req.body.editblog } } 
   );
   console.log(edit);
   res.send({ message: "Blog updated" });
@@ -94,7 +92,7 @@ app.post("/edit3", async (req, res) => {
   console.log("Request body", req.body);
   const edit = await list.updateOne(
     { _id: ObjectId("61e36c0e01f684db6ef969e0") },
-    { $set: { body: req.body.editblog } } // we were doing JSON.stringify({editblog: '' }),
+    { $set: { body: req.body.editblog } } 
   );
   console.log(edit);
   res.send({ message: "Blog updated" });
