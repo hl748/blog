@@ -10,7 +10,6 @@ const ObjectId = require("mongodb").ObjectId;
 const mongodb = require("mongodb");
 
 const MONGODB_URI =
-  "mongodb+srv://HLUser:Aurora98@cluster0.0zhbi.mongodb.net/Project0?retryWrites=true&w=majority";
 
 const store = new mongodbStore({
   uri: MONGODB_URI,
